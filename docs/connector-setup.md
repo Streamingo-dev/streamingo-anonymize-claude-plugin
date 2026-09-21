@@ -3,7 +3,7 @@
 This page walks through connecting Claude to Streamingo Anonymize so you
 can manage anonymization projects and blur videos and images from a
 conversation. It's written for Claude Desktop and the claude.ai web app — if
-you use Claude Code instead, see the main [README](https://bitbucket.org/vaiteam/streamingo-anonymize-claude-plugin).
+you use Claude Code instead, see the main [README](https://github.com/Streamingo-dev/streamingo-anonymize-claude-plugin).
 
 No technical setup is required. You're adding a connector: a link that lets
 Claude talk to Streamingo Anonymize on your behalf, the same way you might

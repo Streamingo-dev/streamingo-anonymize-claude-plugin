@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # The endpoint check is the point of this schedule. A host can serve 200 on /
+    # while silently failing to route /mcp* — that happened once and no amount of
+    # manifest validation would have caught it before a user did.
+    - cron: '0 */6 * * *'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin validate . --strict
+      - run: claude plugin validate .claude-plugin/plugin.json --strict
+      - run: claude plugin validate skills --strict
+      - run: claude plugin validate commands --strict
+
+  endpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/check-endpoint.sh https://anonymize.streamingo.ai/mcp/mcp

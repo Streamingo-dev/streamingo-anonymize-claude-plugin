@@ -10,7 +10,7 @@ it doesn't create one for you.
 ## Claude Code install
 
 ```
-/plugin marketplace add https://bitbucket.org/vaiteam/streamingo-anonymize-claude-plugin.git
+/plugin marketplace add Streamingo-dev/streamingo-anonymize-claude-plugin
 /plugin install streamingo-anonymize
 /reload-plugins
 /mcp

@@ -9,6 +9,6 @@
     "url": "https://anonymize.streamingo.ai"
   },
   "homepage": "https://anonymize.streamingo.ai",
-  "repository": "https://bitbucket.org/vaiteam/streamingo-anonymize-claude-plugin",
+  "repository": "https://github.com/Streamingo-dev/streamingo-anonymize-claude-plugin",
   "license": "MIT"
 }

@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+.claude/settings.local.json
+.superpowers/
+docs/superpowers/
+skills-vs-mcp-instructions.md

@@ -1,0 +1,30 @@
+# Bitbucket Pipelines must be enabled once in Repository settings > Pipelines > Settings.
+# The endpoint check is a custom pipeline so it can be scheduled: add a schedule in
+# Repository settings > Pipelines > Schedules, branch main, pipeline "endpoint-check".
+image: node:22
+
+definitions:
+  steps:
+    - step: &validate
+        name: validate plugin
+        script:
+          - npm install -g @anthropic-ai/claude-code
+          - claude plugin validate . --strict
+          - claude plugin validate .claude-plugin/plugin.json --strict
+          - claude plugin validate skills --strict
+          - claude plugin validate commands --strict
+    - step: &endpoint
+        name: endpoint smoke test
+        script:
+          - ./scripts/check-endpoint.sh https://anonymize.streamingo.ai/mcp/mcp
+
+pipelines:
+  default:
+    - step: *validate
+    - step: *endpoint
+  pull-requests:
+    '**':
+      - step: *validate
+  custom:
+    endpoint-check:
+      - step: *endpoint

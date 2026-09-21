@@ -1,0 +1,21 @@
+{
+  "name": "streamingo",
+  "description": "Video privacy and anonymization tooling from Streamingo Inc.",
+  "owner": {
+    "name": "Streamingo Inc.",
+    "email": "support@streamingo.ai",
+    "url": "https://anonymize.streamingo.ai"
+  },
+  "plugins": [
+    {
+      "name": "streamingo-anonymize",
+      "displayName": "Streamingo Anonymize",
+      "source": "./",
+      "description": "Redact faces and sensitive speech in video and images without leaving the conversation: pick a project, submit a job, track it, share the result. Requires a Streamingo Anonymize account.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Streamingo Inc."
+      }
+    }
+  ]
+}

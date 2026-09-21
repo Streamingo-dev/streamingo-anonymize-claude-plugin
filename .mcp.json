@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "streamingo-anonymize": {
+      "type": "http",
+      "url": "https://anonymize.streamingo.ai/mcp/mcp"
+    }
+  }
+}

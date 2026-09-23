@@ -1,7 +1,7 @@
 {
   "name": "streamingo-anonymize",
   "displayName": "Streamingo Anonymize",
-  "description": "Redact faces and sensitive speech in video and images without leaving the conversation: pick a project, submit a job, track it, share the result. Requires a Streamingo Anonymize account.",
+  "description": "Blur faces in video and images without leaving the conversation: pick a project, submit a job, track it, share the result. Faces only — audio is not anonymized. Requires a Streamingo Anonymize account.",
   "version": "1.0.0",
   "author": {
     "name": "Streamingo Inc.",

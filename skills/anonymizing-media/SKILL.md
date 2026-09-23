@@ -1,12 +1,12 @@
 ---
 name: anonymizing-media
-description: Use when someone wants to blur or redact faces in a video or image, anonymize speech, de-identify or GDPR-proof footage, remove PII from a recording, or asks what Streamingo Anonymize accepts, what it costs, or whether it can identify people.
+description: Use when someone wants to blur or redact faces in a video or image, de-identify or GDPR-proof footage, remove PII from a recording, or asks what Streamingo Anonymize accepts, what it does to audio, what it costs, or whether it can identify people.
 ---
 
 # Streamingo Anonymize
 
-Detects and redacts faces and sensitive speech in video and images, so footage
-stays usable for analysis after the identities are gone. The `streamingo-anonymize` MCP
+Detects and blurs **faces** in video and images, so footage stays usable for
+analysis after the identities are gone. The `streamingo-anonymize` MCP
 tools drive it.
 
 **The step-by-step submission workflow is not here.** The server sends its own
@@ -25,6 +25,20 @@ Never shorten it to "Streamingo" alone — that names a different video-analytic
 product. Never call it "Deeplabel" or "faceblur" to a user; both are retired internal
 names. (One tool docstring misspells it "ananymize" — don't repeat that.)
 
+## Scope: faces only
+
+It blurs human faces. That is the whole of what it redacts — not bodies, not
+license plates, not on-screen text, badges or documents, not tattoos or other
+identifying marks.
+
+**It does not anonymize audio.** There is no per-person voice anonymization and
+no redaction of spoken content. The two audio flags are blunt and global: one
+deletes the track, the other distorts all of it. Neither detects a speaker or
+targets what was said. If someone asks to protect one person's voice, or to bleep
+names out of a recording, say plainly that this product does not do that.
+
+Custom PII types beyond faces go to sales, not to a workaround.
+
 ## What it is not
 
 Anonymize removes identity. It does not establish it. It is **not** facial
@@ -37,14 +51,13 @@ matching carries its own legal exposure worth flagging.
 
 ## Check before submitting
 
-Four things fail *after* a job is accepted, so check them first.
+Three things fail *after* a job is accepted, so check them first.
 
 | Check | Accepted | Reject early |
 |---|---|---|
 | Video format | `.mp4`, `.avi`, `.mov` | `.mkv`, `.webm`, anything else — ask for a re-export |
 | Image format | `.jpeg`, `.jpg`, `.png` | `.heic`, `.tiff`, raw |
 | Resolution | up to 4K UHD | above 4K |
-| Length | up to 8 hours per file | longer — split it before submitting |
 
 CCTV and DVR/NVR exports are often proprietary containers or unusual codecs.
 Confirm the actual file extension rather than assuming, and ask for an `.mp4`
@@ -69,12 +82,14 @@ and re-billed, so raise them *before* submitting, not after.
 |---|---|
 | `toggleHairblur` | `False` blurs the face only; `True` covers the full head including hair |
 | `remove_audio` | strips audio entirely |
-| `modifyAudio` | anonymizes speech instead of removing it — whether that alters the voice or redacts spoken content is not documented, so for PHI or named individuals confirm with sales before relying on it |
+| `modifyAudio` | distorts the entire audio track — one global effect over the whole recording. Not per-speaker, not speech-content redaction: every voice in the file is distorted, including ones nobody asked to protect |
 | `enableReview` | unlocks the web review editor for adjusting detections later |
 | `selectiveBlur` | lets the user un-blur or re-blur individual faces later |
 
-Both audio flags off means the original audio is kept — for patient, participant
-or interview recordings that usually defeats the purpose. Say so.
+Both audio flags off means the original audio is kept untouched — for patient,
+participant or interview recordings, faces blurred over intact identifiable
+speech usually defeats the purpose. Say so, and say what the options actually
+are: lose the audio, or distort all of it. There is no middle setting.
 
 Review and selective-blur editing happen in the Streamingo Anonymize web UI, not
 through these tools. `selectiveBlur` means someone with platform access can

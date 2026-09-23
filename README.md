@@ -1,11 +1,12 @@
 # Streamingo Anonymize for Claude
 
-Streamingo Anonymize finds people in videos and images and redacts them, so
-footage can be shared or analysed without exposing anyone's identity. This
-plugin connects Claude to the hosted service, so you can manage anonymization
-projects and submit jobs from a conversation instead of the dashboard. You'll
-need a Streamingo Anonymize account — the plugin gives Claude access to yours,
-it doesn't create one for you.
+Streamingo Anonymize finds faces in videos and images and blurs them, so
+footage can be shared or analysed without exposing anyone's identity. Faces
+only — it does not anonymize audio. This plugin connects Claude to the hosted
+service, so you can manage anonymization projects and submit jobs from a
+conversation instead of the dashboard. You'll need a Streamingo Anonymize
+account — the plugin gives Claude access to yours, it doesn't create one for
+you.
 
 ## Claude Code install
 

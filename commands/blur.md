@@ -3,7 +3,7 @@ description: Anonymize a video or image with Streamingo Anonymize
 argument-hint: [media URL]
 ---
 
-Submit media to Streamingo Anonymize for face and audio redaction.
+Submit media to Streamingo Anonymize for face blurring.
 
 If "$ARGUMENTS" is non-empty, treat it as the URL of the media to anonymize.
 Otherwise ask what to anonymize.

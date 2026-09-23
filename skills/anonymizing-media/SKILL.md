@@ -140,5 +140,10 @@ Public reference: [FAQs](https://anonymize.streamingo.ai/home/FAQs.html) ·
 ## Sharing a result
 
 `generate_embedd_link` returns a view-only link that opens on the Streamingo
-Anonymize platform and does not download the file. Set `expiry_days` to match
-how long the recipient actually needs it.
+Anonymize platform and does not download the file.
+
+`expiry_days` is the link's lifetime. The platform's own options are **1, 7, 30
+and 90 days** — offer those rather than an open-ended question, and match the
+choice to how long the recipient actually needs it. It defaults to 1 day, which
+is shorter than most people assume, so confirm it instead of letting it fall
+through.

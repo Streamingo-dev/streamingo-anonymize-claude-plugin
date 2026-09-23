@@ -10,9 +10,10 @@ and let the user pick.
 
 Confirm two things before generating:
 
-- **How many days the link should stay live.** Pass it as `expiry_days`; the
-  default is 1 day, which is usually shorter than people expect. Ask rather
-  than assuming.
+- **How many days the link should stay live.** The platform offers **1, 7, 30
+  or 90 days** — offer those four rather than asking an open question. Pass the
+  answer as `expiry_days`. The default is 1 day, usually shorter than people
+  expect, so ask rather than letting it fall through.
 - **Whether the job actually finished.** Check inference status first — a link
   to an unfinished job is not useful.
 

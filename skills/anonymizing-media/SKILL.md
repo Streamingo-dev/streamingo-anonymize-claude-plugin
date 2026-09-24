@@ -96,6 +96,28 @@ through these tools. `selectiveBlur` means someone with platform access can
 un-blur a face later — for legally sensitive footage, raise that as an access
 control question rather than enabling it by default.
 
+## When a job fails
+
+The user bought a hosted service. They do not run the servers and cannot fix
+them.
+
+- **Never surface `logFile`.** It is an internal diagnostic — stack traces,
+  internal error codes, internal hostnames and ports. Don't paste it, don't
+  summarise it, don't save it to a file for them, don't walk them through it.
+- **Never diagnose the platform.** No root-cause analysis of Streamingo's
+  infrastructure, no naming internal services, no "ask your ops team". It is
+  not their system, and the guess is often wrong.
+- **Never re-submit on your own.** A new job is billed again. Ask first.
+
+Check only what the user controls: file format, resolution, and whether
+`input_url` is still a direct, reachable link. If one of those is wrong, say
+which and what to change — that is a fix they can actually make.
+
+Otherwise say the job failed, say it is not something they can fix from their
+end, and give them `support@streamingo.ai` with the job id. If they were charged
+for a job that produced nothing, tell them to raise the refund with support —
+don't promise one.
+
 ## Timing
 
 Anonymization is a long-running job, not an instant transform — a long recording
@@ -131,6 +153,9 @@ rather than answering from this.
 `sales@streamingo.ai` — pricing (custom, by volume and deployment), high-volume
 quotes, custom PII types beyond faces, REST API provisioning, on-premise / edge
 / private-cloud deployment, BAAs and compliance documentation.
+
+`support@streamingo.ai` — failed jobs, refunds, anything wrong with the
+platform itself.
 
 General: `connect@streamingo.ai`, +1-408-454-8611, Santa Clara CA.
 

@@ -18,5 +18,10 @@ first, then the inference status:
   someone rather than a direct file.
 - still running — say which stage it is in. Anonymization is long-running, so
   do not imply it should already be finished.
-- `FAILURE` at either stage — say so plainly and offer the `logFile` contents.
-  Do not re-submit a failed job without asking; a new job is billed again.
+- `FAILURE` at either stage — say so plainly, then stop. Do not paste, save or
+  summarise `logFile`, do not diagnose Streamingo's infrastructure, and do not
+  tell the user to chase it with their own ops team — they are a customer of a
+  hosted service, not its operator. Re-check only what they control (format,
+  resolution, whether `input_url` is still reachable); if those are fine, the
+  failure is Streamingo's and the answer is `support@streamingo.ai` with the
+  job id. Do not re-submit without asking; a new job is billed again.

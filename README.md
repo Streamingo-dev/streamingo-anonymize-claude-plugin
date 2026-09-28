@@ -56,6 +56,11 @@ Or use the commands directly:
   connector under Organization settings before individual members can
   authenticate it.
 
+## Privacy
+
+[Privacy policy](https://anonymize.streamingo.ai/privacy-policy) — covers what
+the hosted service does with the media you submit through this plugin.
+
 ## Support
 
 Questions or issues: support@streamingo.ai, or open an issue in this

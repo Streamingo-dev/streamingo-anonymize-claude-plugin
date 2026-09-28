@@ -8,7 +8,9 @@
     "email": "support@streamingo.ai",
     "url": "https://anonymize.streamingo.ai"
   },
+  "icon": "./.claude-plugin/icon.png",
   "homepage": "https://anonymize.streamingo.ai",
+  "privacyPolicyUrl": "https://anonymize.streamingo.ai/privacy-policy",
   "repository": "https://github.com/Streamingo-dev/streamingo-anonymize-claude-plugin",
   "license": "MIT"
 }
